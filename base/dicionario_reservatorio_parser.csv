@@ -1,0 +1,28 @@
+,descricao,codigo,tipo,formato,permite_nulo,permite_zerado,permite_negativo
+0,Nome do Reservatório,nom_reservatorio,TEXTO,20 POSIÇÕES,Não,---,---
+1,Tipo de Reservatório,tip_reservatorio,TEXTO,40 POSIÇÕES,Não,---,---
+2,Código do Reservatório nos Modelos de Planejamento,cod_resplanejamento,INTEIRO,,Sim,Não,Não
+3,Posto de Vazão da Usina,cod_posto,INTEIRO,,Sim,Não,Não
+4,Nome da Usina,nom_usina,TEXTO,60 POSIÇÕES,Não,---,---
+5,"Código Único do Empreendimento de Geração (CEG), estabelecido pela ANEEL",ceg,TEXTO,30 POSIÇÕES,Não,---,---
+6,Código do Subsistema,id_subsistema,TEXTO,2 POSIÇÕES,Não,---,---
+7,Nome do Subsistema,nom_subsistema,TEXTO,20 POSIÇÕES,Não,---,---
+8,Nome da Bacia Hidro-Energética,nom_bacia,TEXTO,15 POSIÇÕES,Não,---,---
+9,Nome do Rio,nom_rio,TEXTO,15 POSIÇÕES,Sim,---,---
+10,Nome do Reservatório Equivalente,nom_ree,TEXTO,20 POSIÇÕES,Sim,---,---
+11,Data de Entrada em Operação,dat_entrada,DATE,YYYY-MM-DD,Não,---,---
+12,"Cota Máxima Para Operação. Altura máxima do nível d'água de um reservatório, considerado para fins de operação normal medido em metros(m)",val_cotamaxima,FLOAT,,Não,Sim,Não
+13,Cota Mínima Para Operação. Altura mínima do nível d'água de um reservatório considerado para fins de operação normal medido em metros(m).,val_cotaminima,FLOAT,,Não,Sim,Não
+14,Volume Máximo. Volume do reservatório correspondente ao nível máximo operativo medido em hectômetro cúbico (hm3),val_volmax,FLOAT,,Não,Sim,Não
+15,Volume Mínimo. Volume do reservatório correspondente ao nível mínimo operativo medido em hectômetro cúbico (hm3),val_volmin,FLOAT,,Não,Sim,Não
+16,Volume Útil Total. Volume do reservatório compreendido entre o nível máximo de operação e mínimo normal de operação medido em hectômetro cúbico (hm3),val_volutiltot,FLOAT,,Não,Sim,Não
+17,"Produtividade Específica, que indica quantos MW serão ganhos pela altura da queda",val_produtibilidadeespecifica,FLOAT,,Não,Sim,Não
+18,Produtividade a 65% do volume útil medido em %,val_produtividade65volutil,FLOAT,,Não,Sim,Não
+19,Tipo da Perda de Carga. Indica se o tipo de perda de carga está em porcentagem (%) ou Metros(m).,val_tipoperda,TEXTO,1 POSIÇÕES,Não,---,---
+20,Valor da perda de carga. Estes valores são os mesmos utilizados pelo programa Newave.,val_perda,FLOAT,,Não,Sim,Não
+21,Latitude do Reservatório,val_latitude,FLOAT,,Sim,Não,Sim
+22,Longitude do Reservatório,val_longitude,FLOAT,,Sim,Não,Sim
+23,Identificador do Reservatório,id_reservatorio,TEXTO,6 POSIÇÕES,Não,---,---
+24,Versão 1.0,25/08/2022,Criação do Dicionário de dados,,,,
+25,Versão 1.1,14/02/2023,"Inclusão das informações de latitude e longitude do reservatório (val_latitude, val_longitude)",,,,
+26,Versão 1.2,16/08/2024,Inclusão das informações do identificador do Reservatório (id_reservatorio),,,,
