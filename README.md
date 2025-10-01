@@ -1,6 +1,6 @@
 # ChatONS - Prova de Conceito
 
-Este repositório apresenta o **ChatONS**, uma prova de conceito (PoC) desenvolvida a partir da ideiado desafio solicitado no **DatathONS– 6ª Edição**.  
+Este repositório apresenta o **ChatONS**, uma prova de conceito (PoC) desenvolvida a partir do desafio solicitado pelo ONS no **DatathONS– 6ª Edição**.  
 O projeto demonstra como técnicas modernas de **Recuperação Aumentada por Geração (RAG)** e **sistemas multiagente baseados em LLMs** podem ser aplicadas para construir um mecanismo de **Perguntas e Respostas (Q&A)** sobre o **Portal de Dados Abertos do ONS**.
 
 ## 🎯 Objetivo
