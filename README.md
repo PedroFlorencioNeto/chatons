@@ -1,15 +1,23 @@
 # ChatONS - Prova de Conceito
 
-Este repositório apresenta o **ChatONS**, uma prova de conceito (PoC) desenvolvida a partir do desafio solicitado pelo ONS no **DatathONS– 6ª Edição**.  
-O projeto demonstra como técnicas modernas de **Recuperação Aumentada por Geração (RAG)** e **sistemas multiagente baseados em LLMs** podem ser aplicadas para construir um mecanismo de **Perguntas e Respostas (Q&A)** sobre o **Portal de Dados Abertos do ONS**.
+Este repositório apresenta o **ChatONS**, uma prova de conceito (PoC) desenvolvida a partir do desafio solicitado pelo Operador Nacional do Sistema Elétrico (ONS) no [**DatathONS– 6ª Edição**](https://datathons6aedicao.liga.ventures/) .  
+O projeto é fruto do meu estudo de **Recuperação Aumentada por Geração (RAG)** no curso "[Building RAG Agents with LLMs](https://www.nvidia.com/pt-br/training/instructor-led-workshops/building-rag-agents-with-llms/)" da NVIDIA Deep Learning Institute com o objetivo de construir um mecanismo de **Perguntas e Respostas (Q&A)** sobre o **Portal de Dados Abertos do ONS**.
 
 ## 🎯 Objetivo
 
-Validar a integração entre **LLMs, pipelines de RAG e coordenação multiagente**, oferecendo uma interface de consulta que permita ao usuário explorar os dados abertos do ONS de forma **mais acessível, contextualizada e inteligente**.  
+Validar a integração entre o modelo DeepSeek atribuindo contexto por meio de documentos em formato PDF de dicionários de dados, oferecendo uma interface de consulta que permita ao usuário explorar os dados abertos do ONS de forma **mais acessível, contextualizada e inteligente**.  
 
-## 🧠 Arquitetura Multiagente
+## 🛠️ Stack Tecnológica
 
-A solução adota uma abordagem modular com agentes especializados que colaboram para entregar a resposta final:
+- **Python** – linguagem principal.  
+- **LangChain** – orquestração das LLMs, fluxos de RAG e agentes.  
+- **Qdrant Vector Store** – armazenamento vetorial para busca semântica.  
+
+## ⚙️ Próximos Passos
+
+### 🧠 Arquitetura Multiagente
+
+A solução adotará uma abordagem modular com agentes especializados que colaboram para entregar a resposta final:
 
 1. **Agente de Identificação de Perfil do Usuário**  
    - Analisa a interação inicial para identificar o perfil e nível de conhecimento do usuário (ex.: técnico, gestor, público geral).  
@@ -36,25 +44,3 @@ A solução adota uma abordagem modular com agentes especializados que colaboram
    - Pode:  
      - Validar a resposta e entregá-la ao usuário.  
      - Solicitar uma nova tentativa de resposta caso detecte inconsistências.  
-
----
-
-## 🛠️ Stack Tecnológica
-
-- **Python** – linguagem principal.  
-- **LangChain** – orquestração das LLMs, fluxos de RAG e agentes.  
-- **Qdrant Vector Store** – armazenamento vetorial para busca semântica.  
-- **FastAPI** – exposição da API REST.  
-- **LLM as a Judge** – validação de respostas por meio de grandes modelos de linguagem.  
-
-## ⚙️ Fluxo de Execução
-
-1. O usuário envia uma consulta.  
-2. O **Agente de Identificação de Perfil** interpreta o contexto e adapta a interação.  
-3. O **Agente de Classificação de Intenção** decide o caminho:  
-   - **Dicionário de Dados** (RAG) 
-   - ou **Análise/Inferência** sobre os dados operacionais do ONS.  
-4. Os agentes especializados (Recuperação, Análise, Resposta) geram a resposta.  
-5. A **LLM as a Judge** avalia a qualidade da resposta:  
-   - Se válida → resposta entregue ao usuário.  
-   - Se inconsistente → nova rodada de agentes até correção.
